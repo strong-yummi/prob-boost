@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>냥냥 확률 업</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cat-float">🐱</div>
+  <div class="container">
+    <header class="app-header">
+      <span class="cat">🐈</span>
+      <h1>냥냥 확률 업</h1>
+      <p>확률을 끌어올려 80%까지! 📈</p>
+    </header>
+
+    <nav class="nav">
+      <a href="index.html" class="active">📈 확률 업</a>
+      <a href="history.html">📜 실행 기록</a>
+    </nav>
+
+    <div class="card">
+      <h2>🐾 연산 설정</h2>
+      <div class="inline-form">
+        <span style="color:#8b7355; font-size:13px;">성공 확률</span>
+        <input type="number" id="probInput" min="1" max="99" value="50" />
+        <span style="font-weight:700; color:#be185d;">%</span>
+        <button class="btn primary" id="runBtn">실행 🐾</button>
+      </div>
+      <div class="info">
+        5연속 성공 확률: <strong id="fiveProb">3.1%</strong>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📈 확률 업 중</h2>
+      <div class="status" id="statusText">대기 중... 🐱</div>
+
+      <div class="big-prob" id="bigProb">0%</div>
+      <div class="prob-bar"><div class="fill" id="probFill" style="width:0%">0%</div></div>
+
+      <div class="cpu-mini">
+        CPU 연산: <span id="nonceVal">0</span>회 | 현재 해시: <span id="hashVal" class="hash">-</span>
+      </div>
+
+      <div id="resultArea"></div>
+    </div>
+
+    <div class="card">
+      <h2>📈 통계</h2>
+      <div class="stats">
+        <div class="stat"><div class="label">실행 횟수</div><div class="value" id="statRuns">0</div></div>
+        <div class="stat"><div class="label">평균 시도</div><div class="value" id="statTries">0</div></div>
+      </div>
+    </div>
+
+    <footer class="footer">🐾 냥냥 확률 업 · 고양이가 지켜봐요 🐾</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
